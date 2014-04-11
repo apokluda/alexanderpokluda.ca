@@ -15,10 +15,10 @@ $(document).ready(function(){
 	$("#small-slider .slider-holder li a").fancybox({
 		'transitionIn'		:	'elastic',
 		'transitionOut'		:	'elastic',
-		'speedIn'			:	600, 
-		'speedOut'			:	200, 
-		'overlayShow'		:	true,		
-		"showCloseButton"   :	true,
-		"showNavArrows"     :   true
+		'speedIn'			:	600,
+		'speedOut'			:	200,
+		'overlayShow'		:	true,
+		"showCloseButton"	:	true,
+		"showNavArrows"		:	true
 	});
 });
