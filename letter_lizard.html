@@ -15,11 +15,34 @@
 	<link rel="stylesheet" href="js/fancybox/jquery.fancybox-1.3.1.css" type="text/css" media="screen" />
 	
 	<script src="//ajax.googleapis.com/ajax/libs/jquery/1.4.2/jquery.min.js"></script>
-	<script type="text/javascript" src="js/jquery.jcarousel.js"></script>
 	<script type="text/javascript" src="js/fancybox/jquery.fancybox-1.3.1.js"></script>
-	<script type="text/javascript" src="js/jquery-func.js"></script>
+	
+	<script type="text/javascript">
+	$(document).ready(function() {
+		$("a#known-issues-link").fancybox({
+			'hideOnContentClick': true
+		});
+	});
+	</script>
+
+	<!-- Letter Lizard CSS and Scripts -->
+	<link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Ubuntu+Mono" type="text/css">
+	<link rel="stylesheet" href="LetterLizardJS/letter_lizard.css" type="text/css">
+	<script src="http://code.createjs.com/createjs-2013.12.12.min.js" type="text/javascript"></script>
+	<script src="LetterLizardJS/games.js" type="text/javascript"></script>
+	<script src="LetterLizardJS/letter_lizard.js" type="text/javascript"></script>
+	<!-- /Letter Lizard CSS and Scripts -->
+	
+	<style>
+	#llcontainer {
+		padding: 5px;
+		position: relative;
+		left: -55px;
+		width: 1026px;
+	}
+	</style>
 </head>
-<body>
+<body onload="init()">
 <!-- Shell -->
 <div id="shell">
 	<!-- Header -->
@@ -37,11 +60,12 @@
 	<!-- Navigation -->
 	<div id="navigation">
 		<ul>
-			<li><a href="index.html"><span>home</span></a></li>
+			<li><a href="/"><span>home</span></a></li>
 			<li><a href="academics.html"><span>academics</span></a></li>
 			<li><a href="research.html"><span>research</span></a></li>
 			<li><a href="free_software.html"><span>free software</span></a></li>
 			<li><a href="contact.html"><span>contact</span></a></li>
+			
 		</ul>
 		<a href="letter_lizard.html"><img src="css/images/letter_lizard_small.png" id="letterlizard" alt="Letter Lizard" width="140" height="36"/></a>
 		<div class="cl">&nbsp;</div>
@@ -52,29 +76,110 @@
 	<div id="main" class="big-box">
 		<div class="bg-top">
 			<div class="bg-bottom">
-
 				<!-- Top Text Block -->
 				<div id="top" class="text-block">
 					<!-- Content -->
-					<div id="content" class="box">
-						<h3>Nulla tellus tempus magna. </h3>
+					<div class="content-full box last">
+						<h3>Letter Lizard</h3>
+	
+						<p>I created this game as part of my CS798 Scripting Languages course project at the University of Waterloo.
+						The purpose of the project was to write an application in three different scripting languages and compare the results.
+						Take a look at our report if you're interested--or, just have fun playing the game!</p>
 						
-						<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer dictum, neque ut imperdiet pellen- tesque, nulla tellus tempus magna, sed consectetur orci metus a justo. Integer dictum, neque ut imperdiet pellentesque, nulla tellus tempus magna, sed consectetur orci metus a justo. Aliquam ac congue nunc. Mauris a tortor ut massa egestas tempus. </p>
-						<p>Cras aliquet tellus sed dolor aliquet condimentum. Quisque in ligula orci &hellip; <a href="#">read more</a></p>
+						<p>This was my first attempt at writing any sort of application in JavaScript, however, it was a lot easier than I expected.
+						Feel free to <a href="LetterLizardJS/letter_lizard.js">look at the source code</a>, <a href="LetterLizardJS.zip">
+						download an archive containing all of the source code including the game generator</a>, or even incorporate some of my 
+						designs into your own project. There are few small <a id="known-issues-link" href="#known-issues">known issues</a> 
+						that I haven't had time to fix yet.</p>
+					</div>
+					
+					<div style="display:none;">
+						<div id="known-issues" style="width:500px;">
+							<h3>Known Issues</h3>
+							
+							<h4>The game doesn't work on most touch screen phones and tablets.</h4>
+							<p>I know, sorry. The problem is that Apple and Android devices don't have a way to bring up the
+								on-screen keyboard when there is to text input present. I'm eager to learn more about development
+								for mobile devices, so I plan on making a version where you can tap or drag the letter tiles.</p>
+								
+							<h4>Sometimes there are so many words to be found, the list overflows the game area!</h4>
+							<p>This can be blamed on the "game generator" script that I wrote to generate the sets of scrambled letters
+								and the words to be found. To generate the set of letters, I precomputed the frequency that each letter
+								occurs in the word lists that I was using, and then programmed the script to choose letters with a 
+								probability that corresponds to their frequency. In general, this approach seems to have worked well,
+								but occasionally it generates set of letters that can for only a few or a lot of words.
+							</p>
+						</div>
 					</div>
 					<!-- Content -->
-					<!-- Box -->
-					<div class="box last">
-						<h3>Consectetur  elit</h3>
-						
-						<p>Aliquam ac congue nunc. Mauris a tortor ut massa egestas tempus. Pellentesque tincidunt fermentum diam sagittis ullamcorper.</p>
-						
-						<p>Cras aliquet tellus sed dolor aliquet condimentum &hellip; <a href="#">read more</a></p>
-					</div>
-					<!-- /Box -->
 					<div class="cl">&nbsp;</div>
 				</div>
 				<!-- /Top Text Block -->
+				
+				<!-- Letter Lizard -->
+				<div id="llcontainer">
+					<canvas id="llcanvas" width="1024" height="576">
+				        Sorry! Your browser does not support the Canvas element.
+				        Please update your browser so that you can enjoy the Letter Lizard game.
+				    </canvas>
+				    <div id="splashtext">
+				    <p>
+				    <span class="subtitle">A Game by CS 798 Team 4</span><br>
+				    <span class="subsubtitle">Winter 2014</span>
+				    </p>
+				    <p>
+				    <span class="authors">
+				    Afiya Nusrat<br>
+				    Alexander Pokluda<br>
+				    Michael Wexler<br>
+				    </span>
+				    </p>
+				    <p>
+				    <span class="instruction">Press Space to Start</span>
+				    </p>
+				    </div>
+				    <div id="menu">
+				    <p class="subtitle">
+				    Main Menu
+				    </p>
+				    <form id="menuform" onsubmit="return false;">
+				    <table>
+				    <tr><td class="menuLabel">Number of Rounds:</td><td><input type="number" name="numrounds" min="1" max="5" value="3" class="menuInput"></td></tr>
+				    <tr><td class="menuLabel">Time per Round:</td><td><input type="number" name="timeperround" min="10" max="300" value="120" class="menuInput"> seconds</td></tr>
+				    <tr><td class="menuLabel">Difficulty:</td>
+				    <td><input type="radio" name="difficulty" value="easy"> easy
+				    <input type="radio" name="difficulty" value="medium" checked> normal
+				    <input type="radio" name="difficulty" value="hard"> hard</td></tr>
+				    <tr><td></td><td><input type="submit" value="Start" class="menuInput menuLabel"></td>
+				    </table>
+				    </form>
+				    </div>
+				    <input type="button" value="Main Menu" id="btn:mainMenu" class="gameButton">
+				    <input type="button" value="Hint" id="btn:hint" class="gameButton">
+				    <input type="button" value="Shuffle" id="btn:shuffle" class="gameButton">
+				    <div id="gamestatus">
+				    Round: <span id="round">1 of 3</span><br>
+				    Time Remaining: <span id="timer">0:00</span><br>
+				    Score: <span id="score">0</span>
+				    </div>
+				    <div id="wordlist">
+				    </div>
+				    <a id="continuelink">Continue</a>
+				</div>
+				<!-- /Letter Lizard -->
+				
+				<!-- Bottom Text Block -->
+				<div id="bottom" class="text-block">
+					<!-- Box -->
+					<div class="content-full box last" style="text-align: right;">
+						LetterLizardJS by Alexander Pokluda is released under the <a href="http://www.opensource.org/licenses/mit-license.html">MIT License</a>. <a href="LetterLizardJS.zip">Download the source</a>.
+					</div>
+					<!-- /Box -->
+					
+					<div class="cl">&nbsp;</div>
+				</div>
+				<!-- /Bottom Text Block -->
+				
 				
 			</div>
 		</div>

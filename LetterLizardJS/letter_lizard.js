@@ -1,11 +1,15 @@
-// letter_lizard.js
+// LetterLizardJS
 //
-// This file is part of Group 4's CS798 Scripting Languages project.
+// Copyright (c) 2014 Alexander Pokluda
+//
+// Distributed under the terms of the MIT license.
+// http://www.opensource.org/licenses/mit-license.html
+//
+// This notice shall be included in all copies or substantial portions of the Software.
 //
 // For a detailed discussion of the design of this progam, please see Section 1.2
 // of our report, LetterLizardJS: JavaScript Letter Lizard implementation.
 //
-// Author: Alexander Pokluda (apokluda@uwaterloo.ca)
 
 var timeup = false;
 var config = {
