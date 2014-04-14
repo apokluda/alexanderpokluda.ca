@@ -1,0 +1,99 @@
+#llcontainer {
+	font-family: 'Ubuntu Mono', sans-serif;
+	background-color: #FFFFFF;
+	padding: 5px;
+	position: relative;
+	left: -55px;
+	width: 1026px;
+}
+#llcanvas {
+	border: thin solid;
+	margin-left: auto;
+	margin-right: auto;
+	display: block;
+}
+#splashtext, #menu {
+	position: absolute;
+	display: none;
+}
+.subtitle {
+	font-weight: bold;
+	font-size: 20px;
+	color: #0000FF;
+}
+.subsubtitle {
+	font-size: 18px;
+	color: #00FF00;
+	text-shadow: 1px 1px 2px #000000;
+}
+.authors {
+	color: #FF0000;
+}
+.instruction {
+	font-weight: bold;
+	font-size: 24px;
+}
+.menuInput {
+	width: 50px;
+}
+.menuLabel {
+	font-weight: bold;
+}
+.gameButton {
+	position: absolute;
+	display: none;
+	font-size: large;
+}
+#gamestatus {
+	position: absolute;
+	display: none;
+	font-weight: bold;
+	font-size: 24px;
+	color: #00FF00;
+	text-shadow: 1px 1px 2px #000000;
+}
+#round, #timer, #score {
+	/* Note: text color for timer set by Timer class in JavaScript code */
+	color: #0000FF;
+	text-shadow: none;
+}
+#wordlist {
+	position: absolute;
+	display: none;
+	padding: 15px;
+	-webkit-column-count:3; /* Chrome, Safari, Opera */
+	-webkit-column-gap: 10px;
+	-moz-column-count:3; /* Firefox */
+	-moz-column-gap: 10px;
+	column-count:3;
+	column-gap: 10px;
+}
+#wordlist .not-found-word {
+	background: #E8E8E8;
+}
+#wordlist .length3 {
+	color: #0000CC;
+}
+#wordlist .length4 {
+	color: #3300CC;
+}
+#wordlist .length5 {
+	color: #6600CC;
+}
+#wordlist .length6 {
+	color: #9900CC;
+}
+#wordlist .length7 {
+	color: #CC00CC;
+}
+#wordlist .length8 {
+	color: #FF00CC;
+}
+#continuelink {
+	position: absolute;
+	display: none;
+	border-style: solid;
+	border-width: 2px;
+	border-radius: 5px;
+	padding: 5px;
+}
