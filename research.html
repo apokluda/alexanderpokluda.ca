@@ -34,7 +34,7 @@
 			<li><a href="/"><span>home</span></a></li>
 			<li><a href="academics.html"><span>academics</span></a></li>
 			<li><a href="research.html" class="active"><span>research</span></a></li>
-			<li><a href="free_software.html"><span>free software</span></a></li>
+			<li><a href="code.html"><span>code</span></a></li>
 			<li><a href="contact.html"><span>contact</span></a></li>
 			
 		</ul>
@@ -56,16 +56,83 @@
 
 						<p>I enjoy the challenge of solving problems and doing original research that can have an impact.
 							I have been actively involved in research since beginning my undergraduate degree. Below are
-							descriptions of some of the projects that I have worked with links to my publications.</p>
+							descriptions of some of the projects that I have worked with links to my publications.
+						</p>
 						
 						<h3>Internet Censorship and Circumvention</h3>
 						
 						<p>I am currently researching Internet censorship from a techtical and human rights perspective. 
 							This research will form the basis of my Master's research paper, and I am also aiming to publish
-							a survey paper on the topic.</p>
+							a survey paper on the topic.
+						</p>
 							
-						<h3>pWeb: A Personal Interface to the World Wide Web</h3>
-						<!-- link to website, paper, technical reports -->
+						<h3 id="pweb">pWeb: A Personal Interface to the World Wide Web</h3>
+						<p>My research interests lie primarily in the fields of computer networks and distributed systems
+							and how these technologies can be used to support the common good. Since starting graduate studies
+							in 2012, I have been working with a small, dedicated team of researchers led by Dr. Raouf Boutaba at
+							the University of Waterloo to develop a system called pWeb. The pWeb Project aims to create a state-
+							of-the-art peer-to-peer web hosting infrastructure that is capable of supporting emerging Web
+							technologies such as WebSockets and HTML5 features. We have designed pWeb from the ground up to
+							provide a multimedia-rich user experience that rivals the contemporary client-server hosting
+							infrastructure.
+						</p>
+							
+						<p>A few systems exist or have been proposed that share some similarities with pWeb; however,
+							none of these share the all of the same goals. <a href="http://www.coralcdn.org/">CoralCDN</a>
+							is a hybrid system that uses a peer-to-peer network of caches to reduce the load on a centralized
+							Web server but does not provide dynamic content hosting nor does it focus on censorship resistance.
+							<a href="https://freenetproject.org/">Freenet</a> is a distributed data store that has a lot in
+							common with the first generation of pWeb but it is an older system that has not been designed for
+							modern challenges; as a result, content can be slow to access and dynamic pages are not supported.
+							This is a timely project with the potential for high impact as online surveillance and censorship
+							are growing in scale, scope and sophistication around the world. pWeb will help shape debate from a
+							technical perspective, enhance democracy and preserve free speech online, maintaining the Web as a
+							place of informed public debate.
+						</p>
+							
+						<p>The pWeb technical reports describe in detail the development of the architecture, design, and
+							implementation of the pWeb peer-to-peer Web hosting system. I prepared these reports for publication on the David
+							R. Cheriton School of Computer Science website based on internal deliverables produced for Orange
+							Labs, our industry sponsor, that were comprised of research, software and documentation. pWeb consists
+							of four main software components: the Home Agent, DNS Gateway, Crawler and client software. 
+							For the work that led to the final deliverable, I completed research that led to the design of the
+							DNS Gateway that provides a DNS interface to the pWeb device naming system. I drew on my industry
+							experience as I implemented a production quality version of the Gateway from scratch according to the
+							DNS protocol specification and evaluated the performance of a global, location-aware deployment. My
+							research also led to the development of the Crawler—a component that traverses the graph of Home
+							Agents in the pWeb Plexus network and indexes device and content metadata to construct a searchable
+							database of all devices and content hosted in the system. In June 2013, I flew to France to present the
+							results of our research at Orange Lab’s facility in Paris. The paper pWeb: A Personal Interface to the
+							World Wide Web encompasses our latest research and includes an evaluation of the scalability and 
+							performance of the Crawler on a simulated global deployment of nearly 30,000 Home Agents supporting 2 
+							billion simulated mobile devices. A public deployment of pWeb is acessible though the website
+							<a href="http://www.pwebproject.net/">pwebproject.net</a> and the DNS Gateway and Crawler are available
+							as <a href="code.html#pweb">free software</a>. This research is significant because Orange
+							(formerly France Télécom) may use some of the results in future products and services and pWeb has
+							the potential to revolutionize Web hosting as we know it by giving end users virtually unlimited
+							resources to publish and host content.
+						</p>
+						<br/>
+						<h4>Publications</h4>
+						<p>Ahmed, R., Chowdhury, S. R., <strong>Pokluda, A.</strong>, Bari, M.F., Boutaba, R., and Mathieu, B.
+							(2014) <a href="publications/pWeb%20-%20A%20Personal%20Interface%20to%20the%20World%20Wide%20Web.pdf">pWeb: A Personal Interface to the Word Wide Web</a>.
+							To appear in IFIP Networking 2014. (international conference; graduate work).
+						</p>
+						<p><strong>Pokluda, A.</strong>, Aartail, A., Bari, M.F., Ahmed, R., and Boutaba, R. (2013)
+							<a href="https://cs.uwaterloo.ca/sites/ca.computer-science/files/uploads/files/CS-2013-15.pdf">pWeb Peer-to-Peer Web Hosting Communication System and Dynamic Web Hosting</a>.
+							University of Waterloo Computer Science Technical Report CS-2013-15. 88 pages 
+							(graduate work in collaboration with industry sponsor).
+						</p>
+						<p>Bari, M.F., Chowdhury, S.R., <strong>Pokluda, A.</strong>, Ahmed, R. and Boutaba, R. (2013) 
+							<a href="https://cs.uwaterloo.ca/sites/ca.computer-science/files/uploads/files/CS-2013-13.pdf">Advanced pWeb Features</a>.
+							University of Waterloo Computer Science Technical Report CS-2013-13. 64 pages
+							(graduate work in collaboration with industry sponsor).
+						</p>
+						<p>Ahmed, R., Bari, M.F., Boutaba, R., Chowdhury, S.R., Mathieu, B., and <strong>Pokluda, A.</strong> (2013)
+							<a href="https://cs.uwaterloo.ca/sites/ca.computer-science/files/uploads/files/CS-2013-12.pdf">pWeb: A P2P Web Hosting Framework</a>.
+							University of Waterloo Computer Science Technical Report CS-2013-12. 11 pages
+							(PhD work in collaboration with industry sponsor).
+						</p>
 						
 						<h3>Dynamic Resource Management using Golondrina</h3>
 						<p> I started the research that led to the paper “Managing dynamic memory allocations in a cloud through
@@ -87,19 +154,18 @@
 						<br/>
 						<h4>Publications</h4>
 						<p><strong>Pokluda, A.</strong>, Keller, G., and Lutfiyya, H. (2010) 
-							<a href="http://ieeexplore.ieee.org/xpls/abs_all.jsp?arnumber=5674750">Managing dynamic memory allocations
-							in a cloud through Golondrina</a> (<a href="publications/Managing%20Dynamic%20Memory%20Allocations%20in%20a%20Cloud%20through%20Golondrina.pdf">camera-ready version</a>). Proc. 4th International DMTF Academic Alliance Workshop on Systems and
+							<a href="http://ieeexplore.ieee.org/xpls/abs_all.jsp?arnumber=5674750">Managing Dynamic Memory Allocations
+							in a Cloud through Golondrina</a> (<a href="publications/Managing%20Dynamic%20Memory%20Allocations%20in%20a%20Cloud%20through%20Golondrina.pdf">camera-ready version</a>). Proc. 4th International DMTF Academic Alliance Workshop on Systems and
 							Virtualization Management (SVM). 7-14 (international conference; undergraduate work).
 						</p>
-						<p><strong>Pokluda, A.</strong> (2010) <a href="http://dmtf.org/sites/default/files/slideshow-SVM10.pdf">
-							Managing dynamic memory allocations in a cloud through Golondrina</a>. 4th
+						<p><strong>Pokluda, A.</strong> (2010) <a href="publications/Managing%20Dynamic%20Memory%20Allocations%20in%20a%20Cloud%20through%20Golondrina%20-%20Presentation.pdf">
+							Managing Dynamic Memory Allocations in a Cloud through Golondrina</a>. 4th
 							International DMTF Academic Alliance Workshop on Systems and Virtualization Management (SVM).
 							(international conference; oral presentation; undergraduate work).
 						</p>
-						<p><strong>Pokluda, A.</strong> (2010) <a href="http://arxiv.org/abs/1310.3309">Dynamic resource management using 
-							operating system-level virtualization</a>. University of Western Ontario. (undergraduate honors thesis and 
+						<p><strong>Pokluda, A.</strong> (2010) <a href="http://arxiv.org/abs/1310.3309">Dynamic Resource Management using 
+							Operating System-Level Virtualization</a>. University of Western Ontario. (undergraduate honors thesis and 
 							<a href="publications/Dynamic%20Resource%20Management%20using%20Operating%20System-Level%20Virtualization%20-%20Presentation.pdf">presentation</a>).
-							
 						</p>
 						
 						<h3>Undergraduate Summer Research</h3>
