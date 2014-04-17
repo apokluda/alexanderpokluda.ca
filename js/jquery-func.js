@@ -2,7 +2,8 @@ $(document).ready(function(){
 	$("#big-slider .slider-holder ul").jcarousel({
 		scroll:1,
 		auto: 4,
-		wrap: "both"
+		wrap: "both",
+		animation: "slow"
 	});
 	
 	$("#small-slider .slider-holder ul").jcarousel({
