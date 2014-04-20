@@ -20,6 +20,7 @@ h2, h3, h4 { font-family: Georgia, Serif; font-weight:normal; }
 h2 { font-size:28px; color:#222325; line-height:33px; padding-bottom:5px; }
 h3 { font-size:25px; color:#222325; line-height:31px; padding-bottom:8px; }
 h4 { font-size:16px; color:#b10301; line-height:18px; padding-bottom:11px; }
+#academics h4 { color:#222325; }
 
 p + p { margin-top:13px; }
 
@@ -85,6 +86,8 @@ p + p { margin-top:13px; }
 .slider .image img { float:left; }
 .slider .data { float:right; width:328px; padding-right:15px;  }
 .slider .data p { padding-bottom:22px; }
+
+.content-full ul { padding-left:40px; }
 
 /* Big slider */
 #big-slider { position:relative; height:100%; }
